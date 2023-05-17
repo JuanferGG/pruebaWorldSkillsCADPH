@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 236, 236);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.btnGame{
+    width: fit-content;
+    display: flex;
+    gap: 2em;
+}
+.btnGame span{
+    cursor: pointer;
+    margin-top: 3em;
+    padding: .5em 3em;
+    border-radius: 20px;
+    background: rgb(231, 131, 131);
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    transition: all .5s;
+}
+.btnGame span:hover{
+    opacity: .6;
+}
+.torre{
+    width: 300px;
+    height: 300px;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.ficha1{
+    height: 20px;
+    width: 20px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha2{
+    height: 20px;
+    width: 40px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha3{
+    height: 20px;
+    width: 60px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha4{
+    height: 20px;
+    width: 80px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha5{
+    height: 20px;
+    width: 100px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha6{
+    height: 20px;
+    width: 120px;
+    background: yellow;
+    margin-top: 5px;
+}
+.ficha7{
+    height: 20px;
+    width: 140px;
+    background: yellow;
+    margin-top: 5px;
+}
