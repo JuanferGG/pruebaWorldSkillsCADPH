@@ -6,8 +6,8 @@
     --varColor4: rgb(201, 196, 196);
     --textColor: rgb(129, 121, 121);
 }
-b{
-    font-weight: 900;
+html{
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;
@@ -15,12 +15,16 @@ body{
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden;
 }
+b{
+    font-weight: 900;
+}
 main{
     width: 100vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
 }
+/* TODO ////////////////////    Header     ///////////////////// */
 main header{
     width: 100vw;
     height: 50px;
@@ -28,6 +32,10 @@ main header{
     background: var(--varColor);
     display: flex;
     flex-direction: column;
+
+    /* ! Dejar el header statico */
+    /* position: sticky;
+    top: 0; */
 }
 main header .lineRed{
     display: flex;
@@ -54,7 +62,7 @@ main header .nav-bar ul{
 main header .nav-bar ul li{
     list-style: none;
     border-left: 1.5px solid var(--varColor3);
-    padding: 1em .5em;
+    padding: 0 .5em;
 }
 main header .nav-bar ul li a{
     text-decoration: none;
@@ -68,7 +76,6 @@ main header .nav-bar ul li a:hover{
 }  
 
 /* TODO ////////////////////    sect-01     ///////////////////// */
-
 main .sect-01{
     width: 100%;
     height: 40em;
@@ -76,36 +83,34 @@ main .sect-01{
     justify-content: center;
 }
 main .sect-01 .img{
-    width: 700px;
-    height: 80%;
-    background-image: url("../Recursos/Slider/Slider01.jpeg");
+    width: 90%;
+    height: 100%;
+    background-image: url("../imgs/img01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-    animation: animationBgImg1 10s infinite ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-@keyframes animationBgImg1 {
-    0%{
-        background-image: url("../Recursos/Slider/Slider01.jpeg")
-    }
-    50%{
-        background-image: url("../Recursos/Slider/Slider04.jpeg")
-    }
-    100%{
-        background-image: url("../Recursos/Slider/Slider01.jpeg")
-    }
+main .sect-01 #imgs #btn-l, #btn-r{
+    font-size: 2em;
+    color: aliceblue;
+    cursor: pointer;
+    padding: .2em .6em;
+    background: rgba(194, 188, 188, 0.582);
+    border-radius: 100%;
+    color: yellow;
 }
-main .sect-01 .img-02{
+/* main .sect-01 .img-02{
     width: 700px;
     height: 80%;
     background-image: url("../Recursos/Slider/Slider02.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-clip: padding-box;
-}
-/* Animacion de las imagenes */
-/* TODO ////////////////////    sect-0     ///////////////////// */
+} */
+/* TODO ////////////////////    sect-02     ///////////////////// */
 
 main .sect-02{
     width: 100%;
@@ -220,6 +225,7 @@ main footer h2,h3{
     font-size: 1em;
 }
 
+/* TODO ////////////////////    Responsive     ///////////////////// */
 
 @media (max-width: 900px) {
     main header .nav-bar{
@@ -237,6 +243,8 @@ main footer h2,h3{
     }
     main .sect-01{
         flex-direction: column;
+        align-items: center;
+
     }
     main .sect-02 .info{
         flex-direction: column;
