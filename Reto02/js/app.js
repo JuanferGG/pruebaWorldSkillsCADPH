@@ -26,13 +26,19 @@ const fichaEjem = document.getElementById('ficha01')
 
 //? BTNs
 const nuevo = document.getElementById('nuevo')
-
+const terminar = document.getElementById('terminar')
 
 //TODO ////////////////     Functions       ////////////////////
 
 //* Iniciar Game
 function startGame(){
     torre01.innerHTML = arrayFichas.join('')
+    torre02.innerHTML = ''
+    torre03.innerHTML = ''
+}
+//* terminar Gamee
+function terminarGame(){
+    torre01.innerHTML = ''
     torre02.innerHTML = ''
     torre03.innerHTML = ''
 }
@@ -80,11 +86,25 @@ function fichasCoinciden(coincidirFicha){
             return arrayFichas[i]
         }
     }
-}   
-//* Actualizar Torre
-
+}
 
 //TODO Events
 startGame()
 
 nuevo.addEventListener('click', startGame)
+terminar.addEventListener('click', terminarGame)
+
+
+let timer = document.getElementById('timer')
+let segs = 0;
+let min = 0;
+
+//* Contador
+setInterval(() => {
+    if(segs == 60){
+        min++
+    } else {
+        segs++
+    }
+    timer.textContent = `Time: ${min}:${segs}`
+}, 1000);
